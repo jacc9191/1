@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header><h1>Panel de Administrador</h1></header>
+  <main>
+    <div id="admin-panel" style="display:none">
+      <div id="login">
+        <input type="email" id="email" placeholder="Correo electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Entrar</button>
+      </div>
+
+      <form id="formProducto" style="display:none">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="text" id="talla" placeholder="Talla" required>
+        <textarea id="imagenes" placeholder="Pega URLs separadas por comas" required></textarea>
+        <button type="submit">Agregar Producto</button>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="admin.js"></script>
+  <script>
+    let keysPressed = new Set();
+    document.addEventListener("keydown", e => {
+      keysPressed.add(e.key);
+      if (keysPressed.has("Control") && keysPressed.has("Shift") && keysPressed.has("A")) {
+        document.getElementById("admin-panel").style.display = "block";
+      }
+    });
+    document.addEventListener("keyup", e => keysPressed.delete(e.key));
+  </script>
+</body>
+</html>
