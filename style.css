@@ -238,7 +238,7 @@ header h1 {
 @media (max-width: 600px) {
   .contenedor-productos {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 0.1rem;
   }
 
   .producto {
@@ -247,6 +247,18 @@ header h1 {
 
   /* ❗ Ya no necesitas cambiar aspect-ratio o height aquí */
 }
+
+@media (max-width: 600px) {
+  .contenedor-img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .contenedor-img img.main-img {
+    object-fit: cover;
+  }
+}
+
+
 /* ===================================
    🏷 DESCRIPCIÓN DEL PRODUCTO
    =================================== */
