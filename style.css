@@ -191,21 +191,17 @@ header h1 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-
-/* 📦 Contenedor cuadrado y adaptable de la imagen */
 .contenedor-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 1rem;
   background-color: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 🖼 Imagen dentro del contenedor cuadrado */
 .contenedor-img img.main-img {
   width: 100%;
   height: 100%;
@@ -234,29 +230,6 @@ header h1 {
 }
 
 
-/* 📱 Responsive: columnas únicas en móviles */
-@media (max-width: 600px) {
-  .contenedor-productos {
-    grid-template-columns: 1fr;
-    padding: 0.1rem;
-  }
-
-  .producto {
-    margin: 0 auto;
-  }
-
-  /* ❗ Ya no necesitas cambiar aspect-ratio o height aquí */
-}
-
-@media (max-width: 600px) {
-  .contenedor-img {
-    aspect-ratio: 3 / 4;
-  }
-
-  .contenedor-img img.main-img {
-    object-fit: cover;
-  }
-}
 
 
 /* ===================================
